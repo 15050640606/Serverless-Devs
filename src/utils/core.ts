@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import * as core from '@serverless-devs/core';
+import * as core from '/Users/shihuali/workspace/core/lib';
 
 const semver = require('semver');
 
@@ -8,6 +8,7 @@ const corePath = path.join(core.getRootHome(), 'cache', 'core');
 const corePackagePath = path.join(corePath, 'package.json');
 
 function getCore() {
+  return core;
   if (fs.existsSync(corePackagePath)) {
     const localCoreVersion = require('@serverless-devs/core/package.json').version;
     const cacheCoreVersion = getCoreVersion();

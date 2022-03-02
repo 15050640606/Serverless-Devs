@@ -1,6 +1,6 @@
 {
   "name": "@serverless-devs/s",
-  "version": "2.0.100-beta.11",
+  "version": "2.0.99-beta.2",
   "description": "Serverless devs tool, serverless developer tool, supports Alibaba cloud, AWS, azure, baidu cloud, Huawei cloud, Google cloud and Tencent cloud.",
   "homepage": "https://www.serverless-devs.com",
   "keywords": [
@@ -82,6 +82,6 @@
     "**/*.{js,jsx,ts}": "f2elint exec eslint"
   },
   "dependencies": {
-    "@serverless-devs/core": "beta"
+    "@serverless-devs/core": "^0.1.28-beta.5"
   }
 }

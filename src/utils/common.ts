@@ -18,7 +18,10 @@ export const getProcessArgv = () => {
   const { serverless_devs_temp_argv } = process.env;
   try {
     const tempArgv = JSON.parse(serverless_devs_temp_argv);
+    console.log('tempArgv:', tempArgv);
     const data = getGlobalArgs(tempArgv);
+    console.log('getGlobalArgs:', data);
+
     // 修复 argv 参数
     process.argv = process.argv.slice(0, 2).concat(data._argsObj);
     return assign({}, data, {
@@ -39,6 +42,8 @@ export const getCredentialWithExisted = async (access: string) => {
 
 export const getCredentialWithAll = async () => {
   const data = await getCredentialAliasList();
+  console.log('getCredentialAliasList:', data);
+
   if (data.length > 0) {
     const res = {};
     for (const access of data) {

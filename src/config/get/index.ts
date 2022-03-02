@@ -42,6 +42,7 @@ function notFound() {
 }
 
 (async () => {
+  console.log('s config get start');
   const { access, help } = getProcessArgv();
   program
     .name('s config get')
