@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import * as core from '/Users/shihuali/workspace/core/lib';
+import * as core from '@serverless-devs/core';
 
 const semver = require('semver');
 
